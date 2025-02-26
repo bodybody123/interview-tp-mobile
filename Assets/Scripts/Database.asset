@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc2c8140f45ad444b9d9f93d8e99780, type: 3}
+  m_Name: Database
+  m_EditorClassIdentifier: 
+  objectsData:
+  - <Name>k__BackingField: Arm Chair
+    <Id>k__BackingField: 0
+    <Size>k__BackingField: {x: 3, y: 2}
+    <Prefab>k__BackingField: {fileID: 1720935136250982167, guid: af9814ab8006113408bc60501b02af5e, type: 3}
+  - <Name>k__BackingField: Double Bed
+    <Id>k__BackingField: 1
+    <Size>k__BackingField: {x: 4, y: 4}
+    <Prefab>k__BackingField: {fileID: 732248153687457543, guid: 88adfc6ca370ead4c98b5383ffa5611d, type: 3}
+  - <Name>k__BackingField: Chair
+    <Id>k__BackingField: 2
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 732248153687457543, guid: 88adfc6ca370ead4c98b5383ffa5611d, type: 3}
+  - <Name>k__BackingField: Table (small)
+    <Id>k__BackingField: 3
+    <Size>k__BackingField: {x: 3, y: 3}
+    <Prefab>k__BackingField: {fileID: 3292155024107837299, guid: 8246d5de58165cd459fc7c0858a8210b, type: 3}
+  - <Name>k__BackingField: Table (big)
+    <Id>k__BackingField: 4
+    <Size>k__BackingField: {x: 4, y: 3}
+    <Prefab>k__BackingField: {fileID: 1780114514971489545, guid: 3e382b23609324245a56cdef01379435, type: 3}
+  - <Name>k__BackingField: Lamp
+    <Id>k__BackingField: 5
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 7468771186400771359, guid: 7aed75846f8385e40b109fe0fa23c58f, type: 3}
+  - <Name>k__BackingField: Rug
+    <Id>k__BackingField: 6
+    <Size>k__BackingField: {x: 3, y: 2}
+    <Prefab>k__BackingField: {fileID: 6181297049840587340, guid: 2540b92de1320d740950cd3d3a4b5941, type: 3}
+  - <Name>k__BackingField: Cabinet
+    <Id>k__BackingField: 7
+    <Size>k__BackingField: {x: 2, y: 1}
+    <Prefab>k__BackingField: {fileID: 2690309757689356101, guid: 21a76271bef198e42a7cbdee9a4678ed, type: 3}
