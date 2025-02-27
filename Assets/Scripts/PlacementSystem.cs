@@ -75,6 +75,15 @@ public class PlacementSystem : MonoBehaviour
         inputManager.OnClicked += StopPlacement;
     }
 
+    public void StartRemoving() {
+        StopPlacement();
+        gridVisualization.SetActive(true);
+        buildingState = new RemoveState(grid, preview, floorData, furnitureData, objectPlacer);
+
+        inputManager.OnClicked += PlaceStructure;
+        inputManager.OnClicked += StopPlacement;
+    }
+
     private void PlaceStructure()
     {
         if (inputManager.IsPointerOverUI()) return;

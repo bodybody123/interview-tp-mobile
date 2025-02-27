@@ -15,4 +15,12 @@ public class ObjectPlacer : MonoBehaviour
 
         return placedGameObjects.Count - 1;
     }
+
+    internal void RemoveObjectAt(int gameObjectIndex)
+    {
+        if (placedGameObjects.Count <= gameObjectIndex) return;
+
+        Destroy(placedGameObjects[gameObjectIndex]);
+        placedGameObjects[gameObjectIndex] = null;
+    }
 }
