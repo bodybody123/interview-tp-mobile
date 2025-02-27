@@ -27,6 +27,9 @@ public class PlacementSystem : MonoBehaviour
 
     IBuildingState buildingState;
 
+    [SerializeField]
+    private SoundFeedback soundFeedback;
+
     void Start()
     {
         StopPlacement();
@@ -47,16 +50,6 @@ public class PlacementSystem : MonoBehaviour
         }
     }
 
-    // private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedObjectIndex)
-    // {
-    //     ObjectData selectedObject = database.objectsData[selectedObjectIndex];
-
-    //     GridData selectedData = selectedObject.Id == 0 
-    //         ? floorData : furnitureData;
-
-    //     return selectedData.CanPlaceObjectAt(gridPosition, selectedObject.Size);
-    // }
-
     public void StartPlacement(int Id)
     {
         StopPlacement();
@@ -68,7 +61,8 @@ public class PlacementSystem : MonoBehaviour
             database,
             floorData,
             furnitureData,
-            objectPlacer
+            objectPlacer,
+            soundFeedback
         );
 
         inputManager.OnClicked += PlaceStructure;
@@ -78,7 +72,7 @@ public class PlacementSystem : MonoBehaviour
     public void StartRemoving() {
         StopPlacement();
         gridVisualization.SetActive(true);
-        buildingState = new RemoveState(grid, preview, floorData, furnitureData, objectPlacer);
+        buildingState = new RemoveState(grid, preview, floorData, furnitureData, objectPlacer, soundFeedback);
 
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnClicked += StopPlacement;

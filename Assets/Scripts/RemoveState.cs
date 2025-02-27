@@ -9,19 +9,22 @@ public class RemoveState : IBuildingState
     PreviewSystem previewSystem;
     GridData floorData, furnitureData;
     ObjectPlacer objectPlacer;
+    SoundFeedback soundFeedback;
 
     public RemoveState(
         Grid grid,
         PreviewSystem previewSystem,
         GridData floorData,
         GridData furnitureData,
-        ObjectPlacer objectPlacer
+        ObjectPlacer objectPlacer,
+        SoundFeedback soundFeedback
     ) {
         this.grid = grid;
         this.previewSystem = previewSystem;
         this.floorData = floorData;
         this.furnitureData = furnitureData;
         this.objectPlacer = objectPlacer;
+        this.soundFeedback = soundFeedback;
 
         previewSystem.StartShowingRemovePreview();
     }
@@ -43,6 +46,7 @@ public class RemoveState : IBuildingState
 
         if (selectedData == null) {
         } else {
+            soundFeedback.PlaySound(SoundType.Remove);
             m_selectedObjectIndex = selectedData.GetRepresentationIndex(gridPosition);
 
             if (m_selectedObjectIndex == -1) return;
